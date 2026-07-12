@@ -89,6 +89,9 @@ shopify-product-variant-customization/
 ├── sections/
 ├── snippets/
 ├── templates/
+├── screenshots/
+│   ├── original-product.jpg
+│   └── color-variants-page.jpg
 └── README.md
 ```
 
@@ -124,21 +127,21 @@ The customization:
 
 ---
 
-# 🚀 Installation
+## 🚀 Installation
 
-Clone the repository
+1. Clone the repository
 
 ```bash
 git clone https://github.com/Sulupk/shopify-product-variant-customization.git
 ```
 
-Open the project
+2. Navigate to the project
 
 ```bash
 cd shopify-product-variant-customization
 ```
 
-Upload the theme to a Shopify Development Store or preview using Shopify CLI.
+3. Upload the theme to a Shopify Development Store or preview it using Shopify CLI.
 
 ---
 
