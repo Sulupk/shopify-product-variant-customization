@@ -1,0 +1,71 @@
+{% schema %}
+{
+  "name": "Collection Variants",
+  "settings": []
+}
+{% endschema %}
+
+<div class="page-width">
+  <ul class="grid product-grid grid--2-col-tablet-down grid--4-col-desktop">
+    
+    {% for product in collection.products %}
+
+  {% assign shown_colors = '' %}
+
+  {% for variant in product.variants %}
+
+    {% assign color = variant.option2 | downcase %}
+
+    {% unless shown_colors contains color %}
+
+      {% assign shown_colors = shown_colors | append: color | append: ',' %}
+
+      <li class="grid__item">
+
+        <div class="card-wrapper">
+          <div class="card">
+
+            <a href="{{ product.url }}?variant={{ variant.id }}" class="full-unstyled-link">
+
+              <div class="card__media">
+
+                {% assign img = variant.image | default: product.featured_image %}
+
+                <img 
+  src="{{ img | image_url: width: 400 }}"
+  alt="{{ product.title }} - {{ variant.title }}"
+  width="{{ img.width }}"
+  height="{{ img.height }}"
+  loading="lazy"
+  style="object-fit: contain;"
+>
+
+              </div>
+
+              <div class="card__content">
+                <h3 class="card__heading">
+                  {{ product.title }} - {{ variant.option2 }}
+                </h3>
+
+                <div class="card__information">
+                  <span class="price">
+                    {{ variant.price | money }}
+                  </span>
+                </div>
+              </div>
+
+            </a>
+
+          </div>
+        </div>
+
+      </li>
+
+    {% endunless %}
+
+  {% endfor %}
+
+{% endfor %}
+
+  </ul>
+</div>
