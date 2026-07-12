@@ -58,6 +58,15 @@ Each card uses the correct image, title, and pricing.
 
 ---
 
+## 🔧 Key Customizations
+
+- Customized the Shopify Dawn theme using Liquid templates.
+- Displayed each product color variant as an individual product card.
+- Rendered variant-specific images and pricing dynamically.
+- Preserved responsive behavior of the original Dawn theme.
+
+---
+
 # 🛠️ Technologies Used
 
 - Shopify Liquid
